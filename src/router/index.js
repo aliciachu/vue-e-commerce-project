@@ -47,6 +47,10 @@ const routes = [
         component: () => import('../views/dashboard/OrderView.vue')
       }
     ]
+  },
+  {
+    path: '/admin/:pathMatch(.*)*',
+    redirect: { name: 'Login' }
   }
 ]
 

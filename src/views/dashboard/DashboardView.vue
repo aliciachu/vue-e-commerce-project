@@ -1,10 +1,11 @@
 <template>
-    <h2>這是後台</h2>
+    <h2>後台</h2>
     <nav>
         <RouterLink to="/admin/products">產品列表</RouterLink> |
         <RouterLink to="/admin/order">訂單列表</RouterLink> |
         <RouterLink to="/">回到前台</RouterLink>
     </nav>
+    <a href="#" @click.prevent="signOut">登出</a>
     <RouterView></RouterView>
 </template>
 
@@ -27,6 +28,16 @@ export default {
         .catch(err => {
           console.log(err)
         })
+    },
+    signOut () {
+      const api = `${VITE_URL}/v2/logout`
+      axios.post(api).then((res) => {
+        alert('登出成功！')
+        document.cookie = 'hexToken=; expires=; path=/'
+        this.$router.push('/admin/logout')
+      }).catch((err) => {
+        alert(err.response.data.message)
+      })
     }
   },
   mounted () {

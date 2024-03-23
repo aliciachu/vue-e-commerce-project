@@ -1,5 +1,5 @@
 <template>
-    <h2>這是前台</h2>
+    <h2>前台</h2>
     <nav>
         <RouterLink to="/">Home</RouterLink> |
         <RouterLink to="/about">About</RouterLink> |
