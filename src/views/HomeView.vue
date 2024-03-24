@@ -1,55 +1,18 @@
 <template>
     <div class="container">
       <div class="row mt-5">
-        <div class="col-md-4 mt-md-4">
+        <div v-for="hotProduct in hotProducts" :key="hotProduct.id" class="col-md-4 mt-md-4">
           <div class="card border-0 mb-4">
             <img
-              src="https://images.unsplash.com/photo-1502743780242-f10d2ce370f3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1916&q=80"
+              :src="hotProduct.imageUrl"
               class="card-img-top rounded-0"
-              alt="..."
+              :alt="hotProduct.title"
             />
             <div class="card-body text-center">
-              <h4>Lorem ipsum</h4>
+              <h4>{{ hotProduct.title }}</h4>
               <div class="d-flex justify-content-between">
                 <p class="card-text text-muted mb-0">
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                  diam nonumy eirmod.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mt-md-4">
-          <div class="card border-0 mb-4">
-            <img
-              src="https://images.unsplash.com/photo-1502743780242-f10d2ce370f3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1916&q=80"
-              class="card-img-top rounded-0"
-              alt="..."
-            />
-            <div class="card-body text-center">
-              <h4>Lorem ipsum</h4>
-              <div class="d-flex justify-content-between">
-                <p class="card-text text-muted mb-0">
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                  diam nonumy eirmod.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mt-md-4">
-          <div class="card border-0 mb-4">
-            <img
-              src="https://images.unsplash.com/photo-1502743780242-f10d2ce370f3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1916&q=80"
-              class="card-img-top rounded-0"
-              alt="..."
-            />
-            <div class="card-body text-center">
-              <h4>Lorem ipsum</h4>
-              <div class="d-flex justify-content-between">
-                <p class="card-text text-muted mb-0">
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                  diam nonumy eirmod.
+                  {{ hotProduct.promotion }}
                 </p>
               </div>
             </div>
@@ -138,11 +101,41 @@
 </template>
 
 <script>
+import axios from 'axios'
+const { VITE_URL, VITE_PATH } = import.meta.env
 
 export default {
-
+  data  () {
+    return {
+      hotProducts: [],
+      products: []
+    }
+  },
+  methods: {
+    getProducts () {
+      axios.get(`${VITE_URL}/v2/api/${VITE_PATH}/products/all`)
+        .then(res => {
+          this.products = res.data.products
+          const hotProductsData = [
+            { title: '枸杞', promotion: '全天候的活力補充品：枸杞被譽為活力的象徵，是人們全天候的活力補充品，無論是在早晨、中午還是晚上，都能讓您保持活力滿滿！' },
+            { title: '蓮子', promotion: '心靈寧靜的秘密：在快節奏的生活中，蓮子是您寧靜心靈的秘密武器，享受它帶來的平靜和寧靜，讓每一天都充滿愛與和平。' },
+            { title: '當歸', promotion: '女性健康的首選：當歸是女性健康的聖品，深受女性朋友的喜愛，不論是調節月經、美容養顏還是增強體質，當歸都能為您帶來滿滿的好處！' }
+          ]
+          this.hotProducts = this.products.filter(product => {
+          // 假設只有標題是 '枸杞', '當歸', '蓮子' 的是熱門產品
+            return ['枸杞', '當歸', '蓮子'].includes(product.title)
+          })
+          this.hotProducts.forEach(product => {
+            const hotProductData = hotProductsData.find(data => data.title === product.title)
+            if (hotProductData) {
+              product.promotion = hotProductData.promotion
+            }
+          })
+        })
+    }
+  },
+  mounted () {
+    this.getProducts()
+  }
 }
 </script>
-
-<style scoped>
-</style>

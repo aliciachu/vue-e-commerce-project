@@ -1,5 +1,9 @@
 <template>
-    <h2>產品列表</h2>
+    <div class="row justify-content-center my-auto">
+      <div class="col-md-4 text-center">
+        <h2>產品列表</h2>
+      </div>
+  </div>
     <div class="container mt-md-5 mt-3 mb-7">
       <div class="row">
         <div class="col-md-4">

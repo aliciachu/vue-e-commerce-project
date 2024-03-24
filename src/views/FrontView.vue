@@ -1,21 +1,19 @@
 <template>
     <div class="position-relative">
-      <div class="position-absolute" style="top:0; bottom:0; left:0; right:0; background-image: url(https://images.unsplash.com/photo-1480399129128-2066acb5009e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);
-      background-position: center center; opacity: 0.1;"></div>
+      <div class="position-absolute" style="top:0; bottom:0; left:0; right:0; background-image: url(https://images.unsplash.com/photo-1550826679-1b8ba79f1c18?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&w=1950&q=80https://images.unsplash.com/photo-1583466478015-2dce6bf2f551?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dHJhZGl0aW9uYWwlMjBDaGluZXNlJTIwbWVkaWNpbmV8ZW58MHx8MHx8fDA%3D&w=1950&q=80);
+      background-position: center center; opacity: 0.3;"></div>
       <div class="container d-flex flex-column" style="min-height: 100vh;">
         <NavbarComponent></NavbarComponent>
         <div class="row justify-content-center my-auto">
           <div class="col-md-4 text-center">
-            <h2>Lorem ipsum.</h2>
-            <p class="text-muted mb-0">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.</p>
-            <button class="btn btn-dark rounded-0 mt-6">Lorem ipsum.</button>
+            <h2>朱記中藥行</h2>
+            <p class="text-muted mb-0">探索中藥的奧秘，尋找健康之道！</p>
+            <button class="btn btn-dark rounded-0 mt-6">健康生活的夥伴</button>
           </div>
         </div>
       </div>
     </div>
-    ///////////////////header
     <RouterView></RouterView>
-    ///////////////////footer
     <div class="bg-dark py-5">
       <div class="container">
         <div class="d-flex align-items-center justify-content-between text-white mb-md-7 mb-4">
