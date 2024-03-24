@@ -22,79 +22,53 @@
     </div>
     <div class="bg-light mt-7">
       <div class="container">
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="row justify-content-center py-7">
+        <swiper :navigation="true" :modules="modules" class="mySwiper">
+    <swiper-slide>
+      <div class="row justify-content-center py-7">
                 <div class="col-md-6 text-center">
-                  <h3>Lorem ipsum.</h3>
-                  <p class="my-5">“Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.”</p>
-                  <p><small>—Lorem ipsum dolor sit amet.—</small></p>
+                  <h3>店休公告</h3>
+                  <p class="my-5">我們將於3月24日（週四）停止營業一天。
+<br>
+感謝您一直以來對我們店鋪的支持與信賴。如果您有任何疑問或需要幫助，請隨時聯繫我們的客服團隊，我們將盡快為您提供幫助。
+
+再次感謝您的理解與支持！
+
+</p>
+                  <p><small>—祝您度過愉快的一天！—</small></p>
                 </div>
               </div>
-            </div>
-            <div class="carousel-item">
-              <div class="row justify-content-center py-7">
+            </swiper-slide>
+            <swiper-slide>
+      <div class="row justify-content-center py-7">
                 <div class="col-md-6 text-center">
-                  <h3>Lorem ipsum.</h3>
-                  <p class="my-5">“Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.”</p>
-                  <p><small>—Lorem ipsum dolor sit amet.—</small></p>
+                  <h3>專業顧問服務</h3>
+                  <p class="my-5">親愛的顧客，我們很高興向您介紹我們全新的顧問服務！我們的食補團隊擁有豐富的行業經驗和專業知識，能夠為您提供最專業的顧問服務。無論您對食補有任何疑問或者需要建議，我們都能夠為您提供最合適的解決方案。</p>
+                  <p><small>—食補團隊—</small></p>
                 </div>
               </div>
-            </div>
-            <div class="carousel-item">
-              <div class="row justify-content-center py-7">
-                <div class="col-md-6 text-center">
-                  <h3>Lorem ipsum.</h3>
-                  <p class="my-5">“Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.”</p>
-                  <p><small>—Lorem ipsum dolor sit amet.—</small></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <a class="carousel-control-prev" href="#carouselExampleControls"  role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-        </div>
+            </swiper-slide>
+  </swiper>
       </div>
     </div>
     <div class="container my-7">
       <div class="row">
         <div class="col-md-6">
-          <img src="https://images.unsplash.com/photo-1490312278390-ab64016e0aa9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="" class="img-fluid">
+          <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1769&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="img-fluid">
         </div>
         <div class="col-md-4 m-auto text-center">
-          <h4 class="mt-4">Lorem ipsum</h4>
-          <p class="text-muted">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna.</p>
+          <h4 class="mt-4">團隊</h4>
+          <p class="text-muted">我們的團隊由一群專業的營養師、中醫師和食品專家組成，他們具有豐富的知識和豐富的經驗，能夠為您提供最專業的建議和指導。無論您遇到什麼問題或需求，我們的團隊都將全力以赴，為您提供最合適的解決方案和最貼心的服務。</p>
         </div>
       </div>
       <div class="row flex-row-reverse justify-content-between mt-4">
         <div class="col-md-6">
-          <img src="https://images.unsplash.com/photo-1490312278390-ab64016e0aa9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="" class="img-fluid">
+          <img src="https://images.unsplash.com/photo-1633509907796-ece8a21bdbcb?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="img-fluid">
         </div>
         <div class="col-md-4 m-auto text-center">
-          <h4 class="mt-4">Lorem ipsum</h4>
-          <p class="text-muted">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna.</p>
-        </div>
-      </div>
-    </div>
-    <div class="bg-light py-4">
-      <div class="container">
-        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center align-items-start">
-          <p class="mb-0 fw-bold">Lorem ipsum dolor sit amet.</p>
-          <div class="input-group w-md-50 mt-md-0 mt-3">
-            <input type="text" class="form-control rounded-0" placeholder="" />
-            <div class="input-group-append">
-              <button class="btn btn-dark rounded-0" type="button" id="search">
-                Lorem ipsum
-              </button>
-            </div>
-          </div>
+          <h4 class="mt-4">品質</h4>
+          <p class="text-muted">我們的產品在生產過程中嚴格遵循國際標準和規範，所有原材料均來自優質、可追溯的來源，並通過了專業機構的檢測和認證，確保不含有害物質和污染物。此外，我們的生產工藝和設備也經過了嚴格的檢測和認證，以確保產品的安全和衛生。
+
+我們的每一份產品都配有完整的品質保證書，標誌著我們對品質的承諾和信心。您可以放心選購我們的產品，享受最純淨、最安全、最優質的食材，為自己和家人帶來健康與幸福。</p>
         </div>
       </div>
     </div>
@@ -102,6 +76,10 @@
 
 <script>
 import axios from 'axios'
+import { Swiper, SwiperSlide } from 'swiper/vue'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import { Navigation } from 'swiper/modules'
 const { VITE_URL, VITE_PATH } = import.meta.env
 
 export default {
@@ -136,6 +114,15 @@ export default {
   },
   mounted () {
     this.getProducts()
+  },
+  components: {
+    Swiper,
+    SwiperSlide
+  },
+  setup () {
+    return {
+      modules: [Navigation]
+    }
   }
 }
 </script>
