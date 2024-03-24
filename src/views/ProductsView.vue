@@ -1,4 +1,8 @@
 <template>
+        <div class="position-relative d-flex align-items-center justify-content-center" style="min-height: 400px;">
+      <div class="position-absolute" style="top:0; bottom: 0; left: 0; right: 0; background-image: url(https://images.unsplash.com/photo-1550826679-1b8ba79f1c18?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&w=1950&q=80https://images.unsplash.com/photo-1583466478015-2dce6bf2f551?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dHJhZGl0aW9uYWwlMjBDaGluZXNlJTIwbWVkaWNpbmV8ZW58MHx8MHx8fDA%3D&w=1950&q=80); background-position: center center; opacity: 0.3;"></div>
+      <h2 class="fw-bold">朱記中藥行</h2>
+    </div>
     <div class="row justify-content-center my-auto">
       <div class="col-md-4 text-center">
         <h2>產品列表</h2>
