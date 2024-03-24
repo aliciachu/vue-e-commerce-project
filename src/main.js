@@ -6,7 +6,7 @@ import { Form, Field, ErrorMessage, defineRule, configure } from 'vee-validate'
 import * as AllRules from '@vee-validate/rules'
 import { localize, setLocale } from '@vee-validate/i18n'
 import zhTW from '@vee-validate/i18n/dist/locale/zh_TW.json'
-import 'bootstrap/scss/bootstrap.scss'
+import './assets/all.scss'
 
 import App from './App.vue'
 import router from './router'
