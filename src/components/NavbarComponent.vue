@@ -7,8 +7,7 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <RouterLink class="nav-item nav-link me-4 active" to="/about">About <span
-                        class="sr-only">(current)</span></RouterLink>
+                <RouterLink class="nav-item nav-link me-4 active" to="/about">關於</RouterLink>
                 <RouterLink class="nav-item nav-link me-4" to="/products">產品列表</RouterLink>
                 <RouterLink class="nav-item nav-link me-4" to="/cart">購物車</RouterLink>
                 <RouterLink class="nav-item nav-link" to="/login">登入<i class="fas fa-shopping-cart"></i></RouterLink>
