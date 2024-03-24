@@ -41,7 +41,7 @@
             <div class="col-md-6"  v-for="product in products" :key="product.key">
               <div class="card border-0 mb-4 position-relative position-relative">
                 <img :src="product.imageUrl" class="card-img-top rounded-0" :alt="product.title"
-                style="object-fit: cover; height: 300;"
+                style="object-fit: cover; height: 300; cursor: pointer;"
                 @click="openProductDetail(product)">
                 <div class="card-body p-0">
                   <h4 class="mb-0 mt-3">{{product.title}}</h4>
